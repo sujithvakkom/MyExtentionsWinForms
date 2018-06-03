@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D2686E19-E7EC-44FF-9931-68B6018F9CAC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyExtentions</RootNamespace>
+    <AssemblyName>MyExtentions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ReportViewer 10.0.0.0\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\BarcodeSymbology\Barcode.cs" />
+    <Compile Include="Components\BarcodeSymbology\Code128\Code128Rendering.cs" />
+    <Compile Include="Components\BarcodeSymbology\Code128\GenCode128.cs" />
+    <Compile Include="Controls\FormAuthentificationExtention\Authorize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FormAuthentificationExtention\Authorize.Designer.cs">
+      <DependentUpon>Authorize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormAuthentificationExtention\DefaultAuthenticator.cs" />
+    <Compile Include="Controls\FormAuthentificationExtention\DefaultUser.cs" />
+    <Compile Include="Controls\FormAuthentificationExtention\IBase\IAuthenticator.cs" />
+    <Compile Include="Controls\FormAuthentificationExtention\IBase\IUser.cs" />
+    <Compile Include="Controls\MessageBoxExtentions\DetailedDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\MessageBoxExtentions\DetailedDialog.Designer.cs">
+      <DependentUpon>DetailedDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageBoxExtentions\MeasureTextHelper.cs" />
+    <Compile Include="Controls\PhoneNumberControl\InvalidPhoneNumber.cs" />
+    <Compile Include="Controls\PhoneNumberControl\PhoneControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PhoneNumberControl\PhoneControl.Designer.cs">
+      <DependentUpon>PhoneControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PhoneNumberControl\Resource.Designer.cs" />
+    <Compile Include="Controls\Test.cs" />
+    <Compile Include="DIalogs\FormMaintance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DIalogs\FormMaintance.designer.cs">
+      <DependentUpon>FormMaintance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DIalogs\FormMaintanceSettings.cs" />
+    <Compile Include="DIalogs\SettingsProvider.cs" />
+    <Compile Include="DIalogs\FormMaintanceSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>FormMaintanceSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelParsers\ToExcel.cs" />
+    <Compile Include="FormAuthentificationExtention\Authorize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuthentificationExtention\Authorize.Designer.cs">
+      <DependentUpon>Authorize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAuthentificationExtention\DefaultAuthenticator.cs" />
+    <Compile Include="FormAuthentificationExtention\DefaultUser.cs" />
+    <Compile Include="FormAuthentificationExtention\IBase\IAuthenticator.cs" />
+    <Compile Include="FormAuthentificationExtention\IBase\IUser.cs" />
+    <Compile Include="FormAuthentificationExtention\LocationSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\TextboxSearchExtention\Exceptions\EmptyDataSourceException.cs" />
+    <Compile Include="Controls\TextboxSearchExtention\Exceptions\NoCloseEventAttachedException.cs" />
+    <Compile Include="Controls\TextboxSearchExtention\IBase\IDataSource.cs" />
+    <Compile Include="Controls\TextboxSearchExtention\IBase\ISelectItem.cs" />
+    <Compile Include="Controls\TextboxSearchExtention\ItemSelecteEventArg.cs" />
+    <Compile Include="Controls\TextboxSearchExtention\SearchBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TextboxSearchExtention\SearchBox.Designer.cs">
+      <DependentUpon>SearchBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextboxSearchExtention\SearchEnabledTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TextboxSearchExtention\SearchEnabledTextBox.Designer.cs">
+      <DependentUpon>SearchEnabledTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextboxSearchExtention\SelectItem.cs" />
+    <Compile Include="Controls\WaterMarkTextBox\WaterMarkTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportPrinter\ReportPriner.cs" />
+    <EmbeddedResource Include="Controls\PhoneNumberControl\PhoneControl.resx">
+      <DependentUpon>PhoneControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PhoneNumberControl\Resource.resx" />
+    <EmbeddedResource Include="DIalogs\FormMaintance.resx">
+      <DependentUpon>FormMaintance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DIalogs\FormMaintanceSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>FormMaintanceSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
